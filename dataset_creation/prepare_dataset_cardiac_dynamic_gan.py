@@ -50,7 +50,7 @@ def get_file_dim_list(file_path):
     return dim_list,file_list
 
 
-h5_dir = '/media/htic/NewVolume3/Balamurali/cardiac_mri_acdc_dataset/train/'
+h5_dir = '../cardiac_acdc/'
 dim_list,file_list = get_file_dim_list(h5_dir)
 print (len(dim_list))
 
@@ -59,7 +59,7 @@ files_np = np.array(file_list)
 batch_size =16
 tform = transforms.Compose([RandomHorizontalFlip(),RandomVerticalFlip(),RandomRotation(5)])
 
-h5_save_dir = '/media/htic/NewVolume3/Balamurali/cardiac_mri_acdc_dataset/train_dyn_16/'
+h5_save_dir = '../cardiac_acdc/train_dyn_16/'
 h5_count = 1
 dim = 160
 step = 10
